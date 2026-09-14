@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>New Arrivals | Malee Dress Point &bull; Horana</title>
+  <meta name="description" content="Fresh styles. New energy. Discover what's next at Malee Dress Point in Horana, Sri Lanka. Filter women's fashion, casual cuts, and elegant ensembles." />
+  <meta name="keywords" content="New Arrivals Malee Dress Point, Clothing Store Horana, Women's Dresses Horana, Fashion Shop Sri Lanka" />
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="New Arrivals | Malee Dress Point &bull; Horana" />
+  <meta property="og:description" content="Fresh styles. New energy. Discover what's next at Malee Dress Point in Horana, Sri Lanka." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1600&auto=format&fit=crop" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: '#FAF7F2',
+            cream: '#F4EFEA',
+            warmWhite: '#FCFBF9',
+            charcoal: '#1C1B1A',
+            deepBlack: '#0A0A0A',
+            champagne: '#C5A880',
+            champagneLight: '#E2D3BE',
+          },
+          fontFamily: {
+            editorial: ['Italiana', 'Cormorant Garamond', 'serif'],
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-warmWhite text-charcoal selection:bg-champagne selection:text-white">
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION
+       ========================================================================== -->
+  <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col group focus:outline-none">
+        <span class="font-editorial text-2xl md:text-3xl tracking-[0.25em] text-deepBlack font-bold leading-tight group-hover:text-champagne transition-colors">MALEE</span>
+        <span class="font-sans text-[9px] md:text-[10px] tracking-[0.45em] text-stone-600 uppercase font-medium">DRESS POINT</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-9" aria-label="Main Navigation">
+        <a href="index.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">Home</a>
+        <a href="collections.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">Collections</a>
+        <a href="new-arrivals.html" class="text-xs uppercase tracking-[0.2em] text-deepBlack font-semibold border-b border-deepBlack pb-0.5">New Arrivals</a>
+        <a href="lookbook.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">Lookbook</a>
+        <a href="about.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">About</a>
+        <a href="gallery.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">Gallery</a>
+        <a href="contact.html" class="text-xs uppercase tracking-[0.2em] text-stone-700 hover:text-champagne transition-colors pb-0.5">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-5">
+        <button id="search-btn" class="p-2 text-stone-800 hover:text-champagne transition-colors focus:outline-none" aria-label="Open Search">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+          </svg>
+        </button>
+
+        <button id="bag-btn" class="p-2 text-stone-800 hover:text-champagne transition-colors relative focus:outline-none" aria-label="Open Curated Looks">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="absolute top-1 right-1 w-2 h-2 bg-champagne rounded-full"></span>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-deepBlack text-warmWhite text-xs uppercase tracking-[0.2em] font-medium hover:bg-champagne hover:text-deepBlack transition-all duration-300">
+          Visit Store
+        </a>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-stone-900 focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Animated Mobile Menu -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 bg-sand/98 backdrop-blur-2xl flex flex-col justify-between p-8 md:p-12 opacity-0 pointer-events-none transition-all duration-500 ease-out">
+    <div class="flex items-center justify-between border-b border-stone-200 pb-6">
+      <div class="flex flex-col">
+        <span class="font-editorial text-2xl tracking-[0.2em] text-deepBlack font-bold">MALEE</span>
+        <span class="text-[9px] tracking-[0.4em] text-stone-500 uppercase">DRESS POINT</span>
+      </div>
+      <button id="close-mobile-menu-btn" class="p-2 text-stone-800 hover:text-champagne transition-colors" aria-label="Close Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col space-y-6 my-auto">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">Home</a>
+      <a href="collections.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">Collections</a>
+      <a href="new-arrivals.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">New Arrivals</a>
+      <a href="lookbook.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">The Lookbook</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">About Us</a>
+      <a href="gallery.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">Showroom Gallery</a>
+      <a href="contact.html" class="mobile-nav-link font-serif text-3xl md:text-4xl text-stone-900 hover:text-champagne transition-colors tracking-tight">Visit Us / Contact</a>
+    </nav>
+
+    <div class="border-t border-stone-200 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-stone-600">
+      <div>
+        <p class="font-medium text-stone-900">P377+797, Horana 12400, Sri Lanka</p>
+        <p class="mt-0.5"><a href="tel:+94777503635" class="hover:underline text-stone-900 font-mono">+94 77 750 3635</a></p>
+      </div>
+      <a href="https://maps.app.goo.gl/DsWrZPzaoTWmGYdL8" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-deepBlack text-white text-xs tracking-widest uppercase hover:bg-champagne hover:text-deepBlack transition-all">
+        Get Directions &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Search Overlay Drawer -->
+  <div id="search-drawer" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl flex items-start justify-center pt-24 px-6 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-warmWhite w-full max-w-2xl rounded-sm p-8 shadow-2xl relative">
+      <button id="close-search-btn" class="absolute top-6 right-6 p-2 text-stone-500 hover:text-stone-900" aria-label="Close Search">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="mb-6">
+        <span class="text-[10px] tracking-[0.3em] uppercase text-champagne font-semibold">Discovery</span>
+        <h3 class="font-serif text-2xl text-stone-900 mt-1">Search Malee Dress Point</h3>
+      </div>
+      <div class="relative mb-6">
+        <input id="search-input" type="text" placeholder="Search collections, lookbook, styles..." class="w-full bg-sand border-b-2 border-stone-300 px-4 py-3 text-base text-stone-900 focus:outline-none focus:border-champagne" />
+      </div>
+      <div id="search-results" class="max-h-72 overflow-y-auto space-y-2">
+        <p class="text-xs tracking-widest uppercase text-stone-400">Type above to explore collections, lookbook, and store sections.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curated Bag Drawer -->
+  <div id="bag-drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex justify-end opacity-0 pointer-events-none transition-all duration-400">
+    <div class="bg-warmWhite w-full max-w-md h-full p-8 flex flex-col justify-between shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between border-b border-stone-200 pb-5">
+          <h3 class="font-serif text-2xl text-stone-900">Your Style Wishlist</h3>
+          <button id="close-bag-btn" class="p-2 text-stone-500 hover:text-stone-900">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="py-10 text-center">
+          <p class="font-serif text-lg text-stone-800">Your wishlist is empty</p>
+          <p class="text-xs text-stone-500 mt-2 max-w-xs mx-auto">Explore our New Arrivals and discover looks to try on at our Horana store.</p>
+        </div>
+      </div>
+      <div class="border-t border-stone-200 pt-6 text-center text-xs text-stone-500">
+        <p>Malee Dress Point &bull; Horana, Sri Lanka</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="pt-40 pb-16 md:pt-48 md:pb-24 bg-sand border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <span class="text-xs uppercase tracking-[0.4em] text-champagne font-semibold block mb-3">CURRENT RELEASES</span>
+        <h1 class="font-editorial text-5xl sm:text-7xl md:text-8xl text-deepBlack font-normal tracking-tight">NEW ARRIVALS</h1>
+        <p class="mt-5 font-serif italic text-lg sm:text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto">
+          "Fresh styles. New energy. Discover what's next."
+        </p>
+        <p class="text-[11px] text-stone-400 mt-3 uppercase tracking-widest">[Sample Styles Shown &bull; Contact or Visit Store in Horana for Stock &amp; Sizing]</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FILTER BAR & CATALOG GRID
+         ========================================================================== -->
+    <section class="py-16 md:py-24 bg-warmWhite">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <!-- Live Category Filter Buttons -->
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-stone-200 pb-8 mb-12">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3" role="tablist">
+            <button class="filter-btn active px-5 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-stone-900 text-white rounded-none transition-all" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn px-5 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-stone-100 text-stone-700 hover:bg-stone-200 rounded-none transition-all" data-filter="women">
+              Women
+            </button>
+            <button class="filter-btn px-5 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-stone-100 text-stone-700 hover:bg-stone-200 rounded-none transition-all" data-filter="casual">
+              Casual
+            </button>
+            <button class="filter-btn px-5 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-stone-100 text-stone-700 hover:bg-stone-200 rounded-none transition-all" data-filter="elegant">
+              Elegant
+            </button>
+            <button class="filter-btn px-5 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-stone-100 text-stone-700 hover:bg-stone-200 rounded-none transition-all" data-filter="trending">
+              Trending
+            </button>
+          </div>
+
+          <span id="catalog-count" class="text-xs uppercase tracking-widest text-stone-400 font-mono">
+            8 Styles Displayed
+          </span>
+        </div>
+
+        <!-- Catalog Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Item 1: Women / Elegant -->
+          <!-- Asset Slot: /assets/images/catalog-01.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="women elegant trending" 
+                   data-name="Aria Draped Silk Halter Dress" 
+                   data-category-label="Women's Fashion &bull; Elegant" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Flawlessly draped silk-touch evening silhouette suited for dinners and celebrations. Available to view at Malee Dress Point, Horana.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=700&auto=format&fit=crop" 
+                alt="Aria Draped Silk Halter Dress sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 bg-white/90 text-deepBlack text-[9px] uppercase tracking-widest px-2 py-0.5">Trending</span>
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Women &bull; Elegant</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Aria Draped Silk Halter</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Casual / Trending -->
+          <!-- Asset Slot: /assets/images/catalog-02.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="casual trending" 
+                   data-name="Solace Relaxed Linen Set" 
+                   data-category-label="Casual Styles &bull; Everyday" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Crafted in breathable cotton-linen blend for relaxed tropical elegance and all-day comfort.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?q=80&w=700&auto=format&fit=crop" 
+                alt="Solace Relaxed Linen Set sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 bg-white/90 text-deepBlack text-[9px] uppercase tracking-widest px-2 py-0.5">New</span>
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Casual Styles</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Solace Relaxed Linen Set</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Women / Casual -->
+          <!-- Asset Slot: /assets/images/catalog-03.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="women casual" 
+                   data-name="Cora Pleated Tiered Sundress" 
+                   data-category-label="Women's Fashion &bull; Casual" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Lightweight flowing sundress with subtle pleats and an adjustable waist cord.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=700&auto=format&fit=crop" 
+                alt="Cora Pleated Tiered Sundress sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Women &bull; Casual</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Cora Pleated Sundress</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Elegant / Trending -->
+          <!-- Asset Slot: /assets/images/catalog-04.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="elegant trending" 
+                   data-name="Nocturne Column Gala Gown" 
+                   data-category-label="Elegant Looks &bull; Evening" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Sophisticated evening gown featuring clean architectural lines and an alluring back drape.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=700&auto=format&fit=crop" 
+                alt="Nocturne Column Gala Gown sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 bg-champagne text-deepBlack text-[9px] uppercase tracking-widest px-2 py-0.5 font-bold">Featured</span>
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Elegant Looks</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Nocturne Gala Gown</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Women / Elegant -->
+          <!-- Asset Slot: /assets/images/catalog-05.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="women elegant" 
+                   data-name="Vesper Wrap Chiffon Maxi" 
+                   data-category-label="Women's Fashion &bull; Elegant" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Airy chiffon wrap dress styled with flutter sleeves and an ethereal hemline.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=700&auto=format&fit=crop" 
+                alt="Vesper Wrap Chiffon Maxi sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Women &bull; Elegant</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Vesper Wrap Chiffon Maxi</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Casual -->
+          <!-- Asset Slot: /assets/images/catalog-06.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="casual" 
+                   data-name="Minimalist Poplin Day Shirt" 
+                   data-category-label="Casual Styles &bull; Essentials" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Crisp tailored poplin shirt with relaxed shoulders, tailored for effortless daily layering.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=700&auto=format&fit=crop" 
+                alt="Minimalist Poplin Day Shirt sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Casual Styles</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Poplin Day Shirt</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Women / Trending -->
+          <!-- Asset Slot: /assets/images/catalog-07.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="women trending" 
+                   data-name="Sienna Sculpted Tailored Jumpsuit" 
+                   data-category-label="Women's Fashion &bull; Statement" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Contemporary jumpsuit with waist cinching, deep-v rever lapels, and wide-leg trousers.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=700&auto=format&fit=crop" 
+                alt="Sienna Sculpted Tailored Jumpsuit sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 bg-white/90 text-deepBlack text-[9px] uppercase tracking-widest px-2 py-0.5">Hot</span>
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Women &bull; Trending</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Sienna Tailored Jumpsuit</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Elegant -->
+          <!-- Asset Slot: /assets/images/catalog-08.jpg -->
+          <article class="catalog-item group bg-sand p-4 rounded-none shadow-sm hover:shadow-xl transition-all duration-500" 
+                   data-category="elegant" 
+                   data-name="Karisma Brocade Occasion Ensemble" 
+                   data-category-label="Elegant Looks &bull; Occasion" 
+                   data-price="[Editable Price / Inquire in Store]" 
+                   data-desc="Rich textured brocade motif with fine metallic weaves designed for momentous Sri Lankan celebrations.">
+            <div class="aspect-[3/4] bg-stone-200 overflow-hidden relative mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=700&auto=format&fit=crop" 
+                alt="Karisma Brocade Occasion Ensemble sample at Malee Dress Point" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                loading="lazy"
+              />
+              <button class="quick-view-trigger absolute inset-x-4 bottom-4 py-2.5 bg-deepBlack/90 text-white text-[11px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-champagne hover:text-deepBlack">
+                Quick View
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-semibold block">Elegant Looks</span>
+              <h3 class="font-serif text-lg text-deepBlack mt-1 line-clamp-1">Karisma Brocade Ensemble</h3>
+              <p class="text-xs font-mono text-stone-500 mt-1.5">[Inquire in Store]</p>
+              <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                <a href="contact.html" class="text-[11px] uppercase tracking-widest text-stone-900 font-semibold hover:text-champagne transition-colors">
+                  Check In Store &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick View Modal Container -->
+    <div id="quick-view-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 opacity-0 pointer-events-none transition-all duration-300" role="dialog" aria-modal="true" aria-label="Style Quick View">
+      <div class="bg-warmWhite max-w-4xl w-full rounded-none overflow-hidden shadow-2xl relative grid grid-cols-1 md:grid-cols-12">
+        <button id="close-quick-view" class="absolute top-4 right-4 z-20 p-2 text-stone-800 hover:text-champagne" aria-label="Close Modal">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="md:col-span-6 bg-stone-200 aspect-[3/4]">
+          <img id="qv-img" src="" alt="Look Preview" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-6 p-8 md:p-12 flex flex-col justify-between">
+          <div>
+            <span id="qv-category" class="text-[10px] uppercase tracking-[0.3em] text-champagne font-bold block mb-1"></span>
+            <h3 id="qv-title" class="font-serif text-2xl md:text-3xl text-deepBlack"></h3>
+            <p id="qv-price" class="text-sm font-mono text-stone-600 mt-2"></p>
+            <p id="qv-desc" class="text-stone-600 text-xs md:text-sm mt-4 leading-relaxed"></p>
+            
+            <div class="mt-6 pt-4 border-t border-stone-200 text-xs text-stone-500 space-y-1">
+              <p>&bull; Sizing &amp; fit checks available at Malee Dress Point</p>
+              <p>&bull; Location: P377+797, Horana 12400, Sri Lanka</p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row gap-3">
+            <a href="tel:+94777503635" class="px-6 py-3 bg-deepBlack text-white text-xs uppercase tracking-widest text-center hover:bg-champagne hover:text-deepBlack transition-colors">
+              Call Store (+94 77 750 3635)
+            </a>
+            <a href="contact.html" class="px-6 py-3 border border-stone-800 text-stone-900 text-xs uppercase tracking-widest text-center hover:bg-stone-900 hover:text-white transition-colors">
+              Directions &amp; Map
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-[#0D0D0D] text-stone-400 py-16 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="font-editorial text-2xl tracking-[0.25em] text-warmWhite font-bold block">MALEE DRESS POINT</span>
+        <p class="text-xs text-stone-500 mt-1">P377+797, Horana 12400, Sri Lanka &bull; +94 77 750 3635</p>
+      </div>
+      <p class="text-xs text-stone-500">&copy; 2026 Malee Dress Point. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filter.js"></script>
+</body>
+</html>

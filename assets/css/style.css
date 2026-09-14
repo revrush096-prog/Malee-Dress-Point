@@ -1,0 +1,373 @@
+/* ==========================================================================
+   MALEE DRESS POINT - LUXURY FASHION 3D EDITORIAL STYLES
+   Location: Horana, Sri Lanka
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Italiana&display=swap');
+
+:root {
+  --color-cream: #FAF7F2;
+  --color-warm-white: #FCFBF9;
+  --color-sand: #F0EAE1;
+  --color-charcoal: #1C1B1A;
+  --color-deep-black: #0A0A0A;
+  --color-champagne: #C5A880;
+  --color-champagne-light: #E2D3BE;
+  --font-serif-luxury: 'Italiana', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-serif-body: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Base Smoothing & Reset */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-warm-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--color-warm-white);
+}
+
+/* Typography Classes */
+.font-editorial {
+  font-family: var(--font-serif-luxury);
+  letter-spacing: 0.02em;
+}
+
+.font-serif-heading {
+  font-family: var(--font-serif-body);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* 3D Perspective & Layering Engine */
+.perspective-stage {
+  perspective: 1400px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* 3D Depth Card with Interactive Tilt */
+.tilt-card-wrapper {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.tilt-card-layer-bg {
+  transform: translateZ(0px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tilt-card-layer-mid {
+  transform: translateZ(25px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tilt-card-layer-front {
+  transform: translateZ(45px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle Specular Sheen for 3D Cards */
+.card-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 65%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.tilt-card:hover .card-glare {
+  opacity: 1;
+}
+
+/* Custom Fashion Cursor (Desktop Only) */
+@media (pointer: fine) and (hover: hover) {
+  body.has-custom-cursor {
+    cursor: none !important;
+  }
+  
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor input,
+  body.has-custom-cursor select,
+  body.has-custom-cursor textarea {
+    cursor: none !important;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-charcoal);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(28, 27, 26, 0.35);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s ease-out, width 0.25s, height 0.25s, border-color 0.25s, background-color 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .cursor-ring.cursor-hover {
+    width: 54px;
+    height: 54px;
+    border-color: var(--color-champagne);
+    background-color: rgba(197, 168, 128, 0.12);
+  }
+
+  .cursor-ring.cursor-view {
+    width: 68px;
+    height: 68px;
+    background-color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: #FAF7F2;
+  }
+  
+  .cursor-ring.cursor-view::after {
+    content: "VIEW";
+  }
+
+  .cursor-ring.cursor-drag {
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-champagne);
+    border-color: var(--color-champagne);
+    color: #0A0A0A;
+  }
+
+  .cursor-ring.cursor-drag::after {
+    content: "DRAG";
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1C5B4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-champagne);
+}
+
+/* Horizontal Collections Track */
+.horizontal-scroll-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Masked Image Reveal Effect */
+.reveal-mask {
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal-mask-image {
+  transform: scale(1.12);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.reveal-mask:hover .reveal-mask-image {
+  transform: scale(1.03);
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 211, 190, 0.35);
+}
+
+.glass-nav-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 3D Floating Showcase Spatial Planes */
+.spatial-layer-far {
+  transform: translateZ(-180px) scale(1.18);
+  will-change: transform;
+}
+
+.spatial-layer-mid {
+  transform: translateZ(-60px) scale(1.06);
+  will-change: transform;
+}
+
+.spatial-layer-base {
+  transform: translateZ(0px);
+}
+
+.spatial-layer-near {
+  transform: translateZ(80px) scale(0.92);
+  will-change: transform;
+}
+
+.spatial-layer-front {
+  transform: translateZ(140px) scale(0.85);
+  will-change: transform;
+}
+
+/* Fullscreen Modal & Lightbox Styles */
+.lightbox-modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  transform: scale(0.94) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .lightbox-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(6px); opacity: 0.35; }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2.2s infinite ease-in-out;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Staggered text appearance */
+.char-reveal {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.in-view .char-reveal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Video Overlay Patterns */
+.video-grid-pattern {
+  background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 0);
+  background-size: 4px 4px;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tilt-card {
+    transform: none !important;
+  }
+  .perspective-stage {
+    perspective: none !important;
+  }
+}
